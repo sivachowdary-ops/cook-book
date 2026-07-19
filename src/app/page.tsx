@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Product } from "@/data/products";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductGrid } from "@/components/ProductGrid";
 import { ProductDetailModal } from "@/components/ProductDetailModal";
 import { useCountry } from "@/context/CountryContext";
 import { useProducts } from "@/context/ProductContext";
@@ -27,9 +27,9 @@ export default function Home() {
 
   // Best Sellers (Subset of catalog)
   const bestSellerIds = [
-    "sweet-bellam-laddu",
-    "snack-sakinalu",
-    "nonveg-boneless-chicken-pickle",
+    "sweet-dry-fruit-laddu",
+    "sweet-ariselu",
+    "snack-kaju-masala",
     "veg-aavakaya-pachadi",
   ];
   
@@ -292,15 +292,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {bestSellers.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onDetailClick={setSelectedProduct}
-              />
-            ))}
-          </div>
+          <ProductGrid products={bestSellers} onDetailClick={setSelectedProduct} />
         </div>
       </section>
 

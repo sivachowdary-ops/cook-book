@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Product } from "@/data/products";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductGrid } from "@/components/ProductGrid";
 import { ProductDetailModal } from "@/components/ProductDetailModal";
 import { useProducts } from "@/context/ProductContext";
 import { Search, Filter, ShieldAlert } from "lucide-react";
@@ -142,11 +142,7 @@ const ShopContent: React.FC = () => {
 
       {/* Product Grid */}
       {loading ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 animate-pulse">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="h-64 bg-bg-cream/35 rounded-2xl border border-border-brand/40" />
-          ))}
-        </div>
+        <ProductGrid products={[]} onDetailClick={setSelectedProduct} loading={true} />
       ) : filteredProducts.length === 0 ? (
         <div className="flex-1 flex flex-col items-center justify-center text-center py-20 bg-white rounded-3xl border border-border-brand">
           <Filter className="w-12 h-12 text-text-dark/30 mb-4" />
@@ -156,15 +152,7 @@ const ShopContent: React.FC = () => {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-          {filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onDetailClick={setSelectedProduct}
-            />
-          ))}
-        </div>
+        <ProductGrid products={filteredProducts} onDetailClick={setSelectedProduct} />
       )}
 
       {/* Min weight warning alert sticky at bottom */}
