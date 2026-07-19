@@ -80,8 +80,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onDetailClick
         </div>
       </div>
 
-      {/* Pricing and cart action */}
-      <div className="p-2 sm:p-3 pt-0 flex items-center justify-between mt-auto gap-1">
+      <div className="p-2 sm:p-3 pt-0 flex flex-col sm:flex-row sm:items-center sm:justify-between mt-auto gap-2">
         <div className="flex flex-col text-left min-w-0">
           <span className="text-[8px] sm:text-[9px] text-text-dark/40 uppercase font-semibold leading-none mb-0.5">Price</span>
           <span className="text-xs sm:text-sm font-bold text-primary font-mono leading-tight truncate">
@@ -91,18 +90,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onDetailClick
         </div>
 
         {product.inStock === false ? (
-          <span className="text-[7px] sm:text-[9px] font-bold text-red-600 bg-red-50 border border-red-100 px-1.5 py-1 rounded-md uppercase tracking-wide shrink-0">
+          <span className="w-full sm:w-auto text-[7px] sm:text-[9px] font-bold text-red-600 bg-red-50 border border-red-100 px-1.5 py-1 rounded-md uppercase tracking-wide text-center">
             Sold Out
           </span>
         ) : (
           <button
             onClick={handleAddToCart}
-            className="bg-accent hover:bg-accent-hover text-primary py-1.5 px-2 sm:py-1.5 sm:px-3 rounded-lg transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer font-bold text-[9px] sm:text-xs hover:scale-105 active:scale-95 shrink-0"
+            className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary py-1.5 px-2 sm:py-1.5 sm:px-3 rounded-lg transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer font-bold text-[9px] sm:text-xs hover:scale-105 active:scale-95 text-center"
             id={`add-to-cart-${product.id}`}
             aria-label={`Add ${product.name} to cart`}
           >
             <Plus className="w-3.5 h-3.5 sm:w-3.5 sm:h-3.5 stroke-[3] shrink-0" />
-            <span className="hidden sm:inline">Add</span>
+            <span>Add</span>
           </button>
         )}
       </div>

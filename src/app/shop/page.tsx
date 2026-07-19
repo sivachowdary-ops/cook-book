@@ -58,7 +58,7 @@ const ShopContent: React.FC = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow flex flex-col min-w-0">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full min-w-0 overflow-hidden">
       {/* Header Banner */}
       <div className="text-center max-w-xl mx-auto mb-10 space-y-2">
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-primary">Our Traditional Catalog</h1>
