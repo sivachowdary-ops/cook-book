@@ -116,7 +116,7 @@ export default function Home() {
       <section className="relative bg-gradient-to-br from-primary via-primary-hover to-[#3A0A10] text-white overflow-hidden py-16 sm:py-24">
         {/* Background Decorative Mandala Pattern Overlay */}
         <div className="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
-          <svg className="w-[600px] h-[600px] fill-current text-accent" viewBox="0 0 100 100">
+          <svg className="w-full max-w-2xl h-auto fill-current text-accent" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="0.5" fill="none" />
             <polygon points="50,5 95,50 50,95 5,50" stroke="currentColor" strokeWidth="0.25" fill="none" />
             <polygon points="50,15 85,50 50,85 15,50" stroke="currentColor" strokeWidth="0.25" fill="none" />

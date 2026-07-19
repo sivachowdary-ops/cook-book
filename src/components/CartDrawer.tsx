@@ -60,7 +60,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
       />
 
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white flex flex-col shadow-2xl border-l border-border-brand animate-in slide-in-from-right duration-300">
+        <div className="w-full max-w-md bg-white flex flex-col shadow-2xl border-l border-border-brand animate-in slide-in-from-right duration-300">
           
           {/* Header */}
           <div className="px-6 py-5 border-b border-border-brand bg-bg-cream/20 flex items-center justify-between">

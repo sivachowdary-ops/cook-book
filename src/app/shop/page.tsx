@@ -142,9 +142,9 @@ const ShopContent: React.FC = () => {
 
       {/* Product Grid */}
       {loading ? (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 animate-pulse">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 animate-pulse">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="h-80 bg-bg-cream/35 rounded-2xl border border-border-brand/40" />
+            <div key={i} className="h-64 bg-bg-cream/35 rounded-2xl border border-border-brand/40" />
           ))}
         </div>
       ) : filteredProducts.length === 0 ? (
@@ -156,7 +156,7 @@ const ShopContent: React.FC = () => {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
