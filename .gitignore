@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# Lock file — excluded so deployment servers regenerate for their own OS/platform
+package-lock.json
+
 # testing
 /coverage
 
