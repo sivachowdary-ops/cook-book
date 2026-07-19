@@ -58,7 +58,7 @@ const ShopContent: React.FC = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow flex flex-col">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow flex flex-col min-w-0">
       {/* Header Banner */}
       <div className="text-center max-w-xl mx-auto mb-10 space-y-2">
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-primary">Our Traditional Catalog</h1>
@@ -69,7 +69,7 @@ const ShopContent: React.FC = () => {
       </div>
 
       {/* Filter and Search Bar Section */}
-      <div className="bg-white rounded-2xl border border-border-brand p-5 shadow-xs mb-8 space-y-4">
+      <div className="bg-white rounded-2xl border border-border-brand p-3 sm:p-5 shadow-xs mb-8 space-y-4 overflow-hidden">
         <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
           
           {/* Search Input */}

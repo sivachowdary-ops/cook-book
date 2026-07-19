@@ -111,7 +111,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full min-w-0">
       {/* 1. HERO SECTION */}
       <section className="relative bg-gradient-to-br from-primary via-primary-hover to-[#3A0A10] text-white overflow-hidden py-16 sm:py-24">
         {/* Background Decorative Mandala Pattern Overlay */}
@@ -226,7 +226,7 @@ export default function Home() {
 
       {/* 3. CATEGORY TILES */}
       <section className="py-16 bg-bg-cream/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary">Browse By Category</h2>
             <div className="w-24 h-1 bg-accent mx-auto mt-3 rounded-full" />
@@ -385,7 +385,7 @@ export default function Home() {
 
       {/* 7. TESTIMONIALS */}
       <section className="py-16 bg-bg-cream/20 border-t border-border-brand">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-serif text-3xl font-bold text-primary">Customer Testimonials</h2>
             <div className="w-16 h-1 bg-accent mx-auto mt-3 rounded-full" />

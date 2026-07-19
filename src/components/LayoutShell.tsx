@@ -13,9 +13,9 @@ export const LayoutShell: React.FC<{ children: React.ReactNode }> = ({ children 
   const isAdmin = pathname === "/admin";
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full min-w-0 overflow-x-hidden">
       {!isAdmin && <Header onCartToggle={() => setIsCartOpen(true)} />}
-      <main className="flex-grow flex flex-col">{children}</main>
+      <main className="flex-grow flex flex-col min-w-0 overflow-x-hidden">{children}</main>
       {!isAdmin && <Footer />}
       {!isAdmin && <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />}
       {!isAdmin && <FloatingWhatsApp />}

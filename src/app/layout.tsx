@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased overflow-x-hidden`}
+      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg-cream text-text-dark font-sans selection:bg-primary selection:text-white overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-bg-cream text-text-dark font-sans selection:bg-primary selection:text-white">
         <Providers>
           <LayoutShell>
             {children}

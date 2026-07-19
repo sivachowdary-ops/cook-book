@@ -97,8 +97,3 @@ body {
   background: var(--accent-hover);
 }
 
-/* Safety net to prevent site-wide horizontal overflow */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}

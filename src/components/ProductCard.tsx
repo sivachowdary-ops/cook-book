@@ -41,7 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onDetailClick
   return (
     <div
       onClick={() => onDetailClick && onDetailClick(product)}
-      className="group bg-card-bg rounded-xl sm:rounded-2xl border border-border-brand overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer h-full ornate-border hover:translate-y-[-2px]"
+      className="group bg-card-bg rounded-xl sm:rounded-2xl border border-border-brand overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer h-full ornate-border hover:translate-y-[-2px] min-w-0"
     >
       <div>
         {/* Product image block — aspect-[4/3] keeps consistent height in both columns */}
@@ -97,13 +97,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onDetailClick
         ) : (
           <button
             onClick={handleAddToCart}
-            className="bg-accent hover:bg-accent-hover text-primary min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 py-1 sm:py-1.5 px-2 sm:px-3 rounded-lg transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer font-bold text-[9px] sm:text-xs hover:scale-105 active:scale-95 shrink-0"
+            className="bg-accent hover:bg-accent-hover text-primary py-1.5 px-2 sm:py-1.5 sm:px-3 rounded-lg transition-all shadow-xs flex items-center justify-center gap-1 cursor-pointer font-bold text-[9px] sm:text-xs hover:scale-105 active:scale-95 shrink-0"
             id={`add-to-cart-${product.id}`}
             aria-label={`Add ${product.name} to cart`}
           >
-            <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3] shrink-0" />
+            <Plus className="w-3.5 h-3.5 sm:w-3.5 sm:h-3.5 stroke-[3] shrink-0" />
             <span className="hidden sm:inline">Add</span>
-            <span className="sm:hidden">Add</span>
           </button>
         )}
       </div>
