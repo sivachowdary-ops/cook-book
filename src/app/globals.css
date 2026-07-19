@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8F0; /* warm cream */
+  --foreground: #1A1210; /* near-black */
+  
+  --primary: #6B0F1A; /* deep maroon */
+  --primary-hover: #520B13;
+  --accent: #D4A017; /* golden yellow */
+  --accent-light: #F5C242;
+  --accent-hover: #B58810;
+  
+  --card-bg: #FFFFFF;
+  --border-color: #E6DFD5;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-hover: var(--accent-hover);
+  --color-bg-cream: var(--background);
+  --color-text-dark: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-border-brand: var(--border-color);
+  
+  --font-serif: var(--font-fraunces), serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Ornate corner flourish effect */
+.ornate-border {
+  position: relative;
+}
+.ornate-border::before,
+.ornate-border::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+}
+.ornate-border::before {
+  top: 4px;
+  left: 4px;
+  border-right: none;
+  border-bottom: none;
+}
+.ornate-border::after {
+  bottom: 4px;
+  right: 4px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Custom scrollbar for mobile slider indicators */
+.scroll-indicator {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.scroll-indicator::-webkit-scrollbar {
+  height: 5px;
+}
+.scroll-indicator::-webkit-scrollbar-track {
+  background: rgba(212, 160, 23, 0.08);
+  border-radius: 4px;
+}
+.scroll-indicator::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+.scroll-indicator::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+
