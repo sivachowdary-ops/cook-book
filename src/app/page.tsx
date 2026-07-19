@@ -235,7 +235,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex overflow-x-auto gap-4 pb-4 md:grid md:grid-cols-5 md:overflow-visible md:pb-0 scroll-indicator">
+          <div className="w-full flex overflow-x-auto gap-4 pb-4 md:grid md:grid-cols-5 md:overflow-visible md:pb-0 scroll-indicator">
             {categories.map((cat) => (
               <Link
                 key={cat.id}
@@ -292,7 +292,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {bestSellers.map((product) => (
               <ProductCard
                 key={product.id}
@@ -402,7 +402,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 scroll-indicator">
+          <div className="w-full flex overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 scroll-indicator">
             <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-80 md:w-full">
               <span className="text-4xl text-accent font-serif absolute top-2 right-4 opacity-30">“</span>
               <p className="text-xs text-text-dark/80 italic leading-relaxed">

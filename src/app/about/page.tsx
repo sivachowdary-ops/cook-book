@@ -38,46 +38,41 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Graphic Placeholder */}
+        {/* Right Graphic Logo */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="w-full max-w-sm aspect-square bg-gradient-to-br from-primary to-primary-hover rounded-3xl p-6 relative flex flex-col justify-center items-center text-center text-white border border-accent/25 ornate-border shadow-xl">
-            {/* Ornate corner marks */}
-            <div className="absolute top-3 left-3 w-8 h-8 border-t-2 border-l-2 border-accent/60" />
-            <div className="absolute bottom-3 right-3 w-8 h-8 border-b-2 border-r-2 border-accent/60" />
-
-            <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 border border-accent/30 text-accent font-serif font-bold text-2xl">
-              C
-            </div>
-            <h3 className="font-serif font-bold text-accent text-lg">[HERITAGE_CRAFT_PHOTO]</h3>
-            <p className="text-[11px] text-white/50 max-w-[200px] mt-2">
-              Photo of traditional brass vessels & ground spices
-            </p>
+          <div className="w-full max-w-sm aspect-square rounded-3xl overflow-hidden border border-accent/25 ornate-border shadow-xl relative">
+            <img
+              src="/images/cook_book_logo.webp"
+              alt="Cook Book Traditional Craft Logo"
+              className="w-full h-full object-cover scale-105"
+            />
           </div>
         </div>
       </div>
 
       {/* 3. Meet the Founder */}
       <div className="bg-bg-cream/40 rounded-3xl border border-border-brand p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ornate-border">
-        {/* Founder Photo Placement */}
+        {/* Founder Photo */}
         <div className="lg:col-span-4 flex justify-center">
-          <div className="w-48 h-48 rounded-full bg-bg-cream border-2 border-accent/50 p-1 flex items-center justify-center relative overflow-hidden shadow-md shrink-0">
-            <div className="w-full h-full rounded-full bg-border-brand/40 flex flex-col items-center justify-center text-center p-4">
-              <span className="text-3xl font-serif text-primary font-bold">F</span>
-              <span className="text-[10px] text-text-dark/50 mt-1 font-semibold uppercase tracking-wider">[FOUNDER_PHOTO]</span>
-            </div>
+          <div className="w-48 h-48 rounded-full border-2 border-accent/50 p-1 overflow-hidden shadow-md shrink-0">
+            <img
+              src="/images/cook_book_founder.webp"
+              alt="Anusha Reddy Nandyala"
+              className="w-full h-full object-cover object-top rounded-full"
+            />
           </div>
         </div>
 
         {/* Founder Quote */}
         <div className="lg:col-span-8 space-y-4">
           <span className="text-xs font-bold text-primary uppercase tracking-widest block">Message from Founder</span>
-          <h3 className="font-serif text-xl font-bold text-primary">A message from [FOUNDER_NAME]</h3>
+          <h3 className="font-serif text-xl font-bold text-primary">A message from Anusha Reddy Nandyala</h3>
           <p className="text-sm italic text-text-dark/75 leading-relaxed">
             "Cook Book started as a labor of love in our home kitchen. We wanted to ensure that children and families living abroad in the UK and USA could still taste the authentic, spice-rich goodness of home. There is a deep, comforting magic in traditional Andhra food, and we are honored to share it with you."
           </p>
           <div className="pt-2">
-            <h4 className="text-sm font-bold text-primary">[FOUNDER_NAME]</h4>
-            <p className="text-xs text-text-dark/40 font-medium">Founder & Head Cook, Cook Book Brand</p>
+            <h4 className="text-sm font-bold text-primary">Anusha Reddy Nandyala</h4>
+            <p className="text-xs text-text-dark/40 font-medium">Founder & Head Cook, Cook Book</p>
           </div>
         </div>
       </div>

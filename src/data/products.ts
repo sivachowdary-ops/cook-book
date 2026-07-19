@@ -196,6 +196,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Premium diamond-shaped delights made with pure cashews and real silver leaf.",
+    image: "/images/categories/sweets_category.webp",
   },
   {
     id: "sweet-kalakand",
@@ -205,6 +206,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Moist, grainy milk cake infused with cardamom. Deliciously soft and fresh.",
+    image: "/images/categories/sweets_category.webp",
   },
   {
     id: "sweet-kobbari-laddu",

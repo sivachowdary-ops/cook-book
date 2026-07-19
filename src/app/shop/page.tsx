@@ -88,7 +88,7 @@ const ShopContent: React.FC = () => {
           <div className="flex items-center gap-1 bg-bg-cream/40 p-1 border border-border-brand rounded-xl w-full md:w-auto justify-center">
             <button
               onClick={() => setVegFilter("all")}
-              className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-2.5 py-1.5 sm:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 vegFilter === "all"
                   ? "bg-primary text-white shadow-xs"
                   : "text-text-dark/60 hover:text-primary"
@@ -98,7 +98,7 @@ const ShopContent: React.FC = () => {
             </button>
             <button
               onClick={() => setVegFilter("veg")}
-              className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
+              className={`px-2.5 py-1.5 sm:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                 vegFilter === "veg"
                   ? "bg-green-700 text-white shadow-xs"
                   : "text-text-dark/60 hover:text-green-700"
@@ -109,7 +109,7 @@ const ShopContent: React.FC = () => {
             </button>
             <button
               onClick={() => setVegFilter("non-veg")}
-              className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
+              className={`px-2.5 py-1.5 sm:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                 vegFilter === "non-veg"
                   ? "bg-red-700 text-white shadow-xs"
                   : "text-text-dark/60 hover:text-red-700"
@@ -123,7 +123,7 @@ const ShopContent: React.FC = () => {
         </div>
 
         {/* Category Horizontal Pills */}
-        <div className="flex gap-2 overflow-x-auto pb-1 pt-1 scrollbar-none">
+        <div className="flex gap-2 overflow-x-auto pb-1 pt-1 scrollbar-none w-full">
           {categoriesList.map((cat) => (
             <button
               key={cat.id}
