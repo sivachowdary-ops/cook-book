@@ -496,7 +496,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow space-y-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow space-y-8 w-full min-w-0 overflow-hidden">
       {/* Admin Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-border-brand pb-6">
         <div>
@@ -679,8 +679,8 @@ export default function AdminDashboard() {
               <p className="text-xs">No checkout leads recorded yet. Once users submit forms, they log here.</p>
             </div>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-left text-xs">
+            <div className="overflow-x-auto w-full">
+              <table className="w-full border-collapse text-left text-xs min-w-[750px]">
                 <thead>
                   <tr className="border-b border-border-brand bg-bg-cream/40 font-bold text-text-dark">
                     <th className="p-3">Order ID</th>
@@ -774,7 +774,7 @@ export default function AdminDashboard() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[10px] font-bold text-text-dark/60 uppercase tracking-wider mb-1">
                     Category
@@ -807,7 +807,7 @@ export default function AdminDashboard() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[10px] font-bold text-text-dark/60 uppercase tracking-wider mb-1">
                     Base Price (INR)
@@ -894,8 +894,8 @@ export default function AdminDashboard() {
                 <p className="text-xs text-text-dark/50">Loading products database from Supabase...</p>
               </div>
             ) : (
-              <div className="overflow-x-auto max-h-[500px]">
-                <table className="w-full border-collapse text-left text-xs">
+              <div className="overflow-x-auto max-h-[500px] w-full">
+                <table className="w-full border-collapse text-left text-xs min-w-[650px]">
                   <thead>
                     <tr className="border-b border-border-brand bg-bg-cream/40 font-bold text-text-dark sticky top-0 z-10">
                       <th className="p-3">Delicacy Name</th>
