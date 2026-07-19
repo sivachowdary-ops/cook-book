@@ -395,7 +395,7 @@ export default function Home() {
           </div>
 
           <div className="w-full flex overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 scroll-indicator">
-            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-80 md:w-full">
+            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-[280px] sm:w-[320px] md:w-full">
               <span className="text-4xl text-accent font-serif absolute top-2 right-4 opacity-30">“</span>
               <p className="text-xs text-text-dark/80 italic leading-relaxed">
                 "The Bellam Laddu tasted exactly like the ones my grandmother used to make. Packaged perfectly in airtight containers, which kept them fresh until arrival!"
@@ -406,7 +406,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-80 md:w-full">
+            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-[280px] sm:w-[320px] md:w-full">
               <span className="text-4xl text-accent font-serif absolute top-2 right-4 opacity-30">“</span>
               <p className="text-xs text-text-dark/80 italic leading-relaxed">
                 "The Boneless Chicken Pickle is exceptional! The spices are perfectly balanced, and the meat is tender. Will definitely be ordering regularly."
@@ -417,7 +417,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-80 md:w-full">
+            <div className="bg-white p-6 rounded-2xl border border-border-brand shadow-xs space-y-4 relative shrink-0 w-[280px] sm:w-[320px] md:w-full">
               <span className="text-4xl text-accent font-serif absolute top-2 right-4 opacity-30">“</span>
               <p className="text-xs text-text-dark/80 italic leading-relaxed">
                 "Excellent Kandi Podi and savories. The aroma of cold-ground spices is noticeable as soon as you open the box. Highly recommended for authentic tastes."
