@@ -550,6 +550,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Spiced bitter gourd chips pickled with tamarind paste. Surprisingly non-bitter and deeply flavorful.",
+    image: "/images/products/kakarakaya_pachadi.webp",
   },
   {
     id: "veg-kottimera-pachadi",
@@ -559,6 +560,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Zesty green coriander leaves blended with green chilies, tamarind, and tempering.",
+    image: "/images/products/kottimera_pachadi.webp",
   },
   {
     id: "veg-lemon-pickle",
@@ -568,6 +570,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Zesty salted lemons aged with red chili powder and mustard powder. Oil-free and digestive.",
+    image: "/images/products/lemon_pickle.webp",
   },
   {
     id: "veg-usirikaya-pachadi",
@@ -577,6 +580,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Whole Indian gooseberries (amla) pickled with spices and cold-pressed groundnut oil.",
+    image: "/images/products/usirikaya_pachadi.webp",
   },
   {
     id: "veg-mushroom-pickle",
@@ -622,6 +626,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Whole peeled garlic cloves pickled in a highly aromatic tamarind and red chili gravy.",
+    image: "/images/products/velluli_pachadi.webp",
   },
   {
     id: "veg-mulakkaya-munagaku",
