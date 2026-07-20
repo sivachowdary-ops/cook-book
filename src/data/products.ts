@@ -394,6 +394,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Tangy combination of juicy chicken pieces marinated with sour sorrel leaves (gongura).",
+    image: "/images/products/gongura_chicken_pickle.webp",
   },
   {
     id: "nonveg-boneless-chicken-pickle",
@@ -470,6 +471,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Savory bone-in fresh fish pieces fried crisp and preserved in high-grade chili spice blend.",
+    image: "/images/products/fish_pickle.webp",
   },
   {
     id: "nonveg-boneless-fish-pickle",
@@ -518,6 +520,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Traditional Telugu sorrel leaves chutney seasoned with garlic, dry red chilies, and fenugreek.",
+    image: "/images/products/gongura_pachadi.webp",
   },
   {
     id: "veg-allam-pachadi",
@@ -527,6 +530,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Tangy and sweet ginger pickle prepared with fresh organic ginger root, jaggery, and tamarind.",
+    image: "/images/products/allam_pachadi.webp",
   },
   {
     id: "veg-tomato-pachadi",
@@ -536,6 +540,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Sun-dried tomatoes ground with tamarind, garlic, and mustard oil seasoning.",
+    image: "/images/products/tomato_pachadi.webp",
   },
   {
     id: "veg-kakarakaya-pachadi",

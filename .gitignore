@@ -52,3 +52,5 @@ schema_batch3.sql
 
 # Python scripts (utility only, not part of the app)
 src/lib/generate_sql.py
+
+.vercel
