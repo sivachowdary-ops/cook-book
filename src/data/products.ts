@@ -150,6 +150,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Sesame seed laddus crafted with high-iron organic black jaggery. Earthy and nourishing.",
+    image: "/images/products/nuvvula_laddu.webp",
   },
   {
     id: "sweet-sunni-undalu",
@@ -169,6 +170,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Superfood laddus featuring roasted flaxseeds, nuts, and organic jaggery. Perfect daily supplement.",
+    image: "/images/products/flaxseed_laddu.webp",
   },
   {
     id: "sweet-badusha",
@@ -178,6 +180,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "South Indian style glazed doughnuts, soft and flaky on the inside, sweet on the outside.",
+    image: "/images/products/badusha.webp",
   },
   {
     id: "sweet-kaju-patti",
@@ -187,6 +190,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Thin premium cashew nut brittles prepared using organic jaggery syrup.",
+    image: "/images/products/kaju_patti.webp",
   },
   {
     id: "sweet-kaju-barfi",
@@ -196,7 +200,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Premium diamond-shaped delights made with pure cashews and real silver leaf.",
-    image: "/images/categories/sweets_category.webp",
+    image: "/images/products/kaju_barfi.webp",
   },
   {
     id: "sweet-kalakand",
@@ -206,7 +210,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Moist, grainy milk cake infused with cardamom. Deliciously soft and fresh.",
-    image: "/images/categories/sweets_category.webp",
+    image: "/images/products/kalakand.webp",
   },
   {
     id: "sweet-kobbari-laddu",
@@ -338,6 +342,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Crispy, hand-sliced potato or banana chips dusted with spicy Andhra red chili powder.",
+    image: "/images/products/hot_chips.webp",
   },
   {
     id: "snack-biscuits",
@@ -347,6 +352,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Traditional bakery-style sweet and salt cookies baked to a golden crumbly texture.",
+    image: "/images/products/biscuits.webp",
   },
   {
     id: "snack-sarvapindi",
@@ -356,6 +362,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "piece",
     isVeg: true,
     description: "Authentic flatbread made from rice flour, chana dal, peanuts, and chili, cooked in a copper pan.",
+    image: "/images/products/sarvapindi.webp",
   },
   {
     id: "snack-spicy-cornflakes",

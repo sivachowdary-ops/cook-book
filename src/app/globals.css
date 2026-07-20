@@ -12,6 +12,9 @@
   
   --card-bg: #FFFFFF;
   --border-color: #E6DFD5;
+
+  --font-fraunces: "Fraunces", Georgia, serif;
+  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @theme {
