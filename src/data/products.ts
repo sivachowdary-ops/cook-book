@@ -434,6 +434,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Rich mutton pieces slow-cooked with sour sorrel leaves (gongura) and dynamic local spices.",
+    image: "/images/products/gongura_mutton_pickle.webp",
   },
   {
     id: "nonveg-boneless-mutton-pickle",
@@ -443,6 +444,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Super-premium boneless goat meat pickled to perfection with red chili powder and ginger.",
+    image: "/images/products/boneless_mutton_pickle.webp",
   },
   {
     id: "nonveg-prawns-pickle",
@@ -462,6 +464,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Juicy prawns combined with tangy sorrel leaves (gongura) for an irresistible tart-and-spicy kick.",
+    image: "/images/products/gongura_prawns_pickle.webp",
   },
   {
     id: "nonveg-fish-pickle",
