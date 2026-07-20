@@ -384,6 +384,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Spicy bone-in chicken pickle loaded with hand-ground spices and fresh ginger-garlic paste.",
+    image: "/images/products/chicken_pickle.webp",
   },
   {
     id: "nonveg-gongura-chicken-pickle",
@@ -412,6 +413,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Rich, rustic country-style pickle made with country chicken (naatukodi) on the bone.",
+    image: "/images/products/naatukodi_pickle.webp",
   },
   {
     id: "nonveg-mutton-pickle",
@@ -421,6 +423,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Bone-in tender mutton chunks marinated in cold-pressed oil and roasted spices.",
+    image: "/images/products/mutton_pickle.webp",
   },
   {
     id: "nonveg-gongura-mutton-pickle",
@@ -448,6 +451,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Fresh prawns dried and deep fried, then pickled with standard and secret spices.",
+    image: "/images/products/prawns_pickle.webp",
   },
   {
     id: "nonveg-gongura-prawns-pickle",
