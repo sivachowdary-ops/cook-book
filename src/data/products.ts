@@ -626,6 +626,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Mango-ginger (a unique rhizome with raw mango aroma) pickle seasoned with hot spices.",
+    image: "/images/products/mamidi_allam_pachadi.webp",
   },
   {
     id: "veg-velluli-pachadi",
@@ -645,6 +646,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Super-healthy combo pickle featuring fresh drumstick pieces and green drumstick leaves.",
+    image: "/images/products/mulakkaya_munagaku_pachadi.webp",
   },
 
   // SPICY POWDERS
@@ -656,6 +658,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Roasted peanuts ground with dry red chilies, garlic, and salt. Best served with hot rice and ghee.",
+    image: "/images/products/palli_podi.webp",
   },
   {
     id: "powder-sonti-podi",
@@ -665,6 +668,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Therapeutic dry ginger powder blended with roasted lentils, cumin, and sea salt.",
+    image: "/images/products/sonti_podi.webp",
   },
   {
     id: "powder-nuvvula-podi",
@@ -674,6 +678,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Earthy roasted sesame seeds ground with traditional spices. Rich in calcium and iron.",
+    image: "/images/products/nuvvula_podi.webp",
   },
   {
     id: "powder-avisala-podi",
@@ -683,6 +688,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Nutritious roasted flaxseeds ground with garlic and dry red chilies. Full of Omega-3s.",
+    image: "/images/products/avisala_podi.webp",
   },
   {
     id: "powder-munagaku-podi",
@@ -692,6 +698,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Superfood moringa powder prepared by drying drumstick leaves and grinding with roasted lentils.",
+    image: "/images/products/munagaku_podi.webp",
   },
   {
     id: "powder-karivepaku-podi",
