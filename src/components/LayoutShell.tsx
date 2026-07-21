@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CartDrawer } from "./CartDrawer";
 import { FloatingWhatsApp } from "./FloatingWhatsApp";
+import { FloatingCart } from "./FloatingCart";
 
 export const LayoutShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -19,6 +20,7 @@ export const LayoutShell: React.FC<{ children: React.ReactNode }> = ({ children 
       {!isAdmin && <Footer />}
       {!isAdmin && <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />}
       {!isAdmin && <FloatingWhatsApp />}
+      {!isAdmin && <FloatingCart onCartToggle={() => setIsCartOpen(true)} />}
     </div>
   );
 };
