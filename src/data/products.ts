@@ -484,6 +484,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Premium boneless fish fillets chopped, crisped, and pickled in native style oil seasoning.",
+    image: "/images/products/boneless_fish_pickle.webp",
   },
   {
     id: "nonveg-gongura-boti-pickle",
@@ -493,6 +494,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Traditional goat tripe (boti) slow-cured with sour gongura and traditional masalas.",
+    image: "/images/products/gongura_boti_pickle.webp",
   },
   {
     id: "nonveg-crab-pickle",
@@ -502,6 +504,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: false,
     description: "Fresh crab meat pickled with shells to preserve sweetness, blended with hot spices.",
+    image: "/images/products/crab_pickle.webp",
   },
 
   // VEG PICKLES
