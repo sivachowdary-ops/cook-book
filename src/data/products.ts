@@ -596,6 +596,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Modern twist on traditional pickling: fresh button mushrooms preserved in hot spices.",
+    image: "/images/products/mushroom_pickle.webp",
   },
   {
     id: "veg-mulakkaya-pachadi",
@@ -605,6 +606,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Crispy tender drumstick pieces pickled in tamarind base with mustard powder.",
+    image: "/images/products/mulakkaya_pachadi.webp",
   },
   {
     id: "veg-coliflower-karam",
@@ -614,6 +616,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Fresh cauliflower florets dried and marinated in rich red chili and mustard oil paste.",
+    image: "/images/products/coliflower_karam.webp",
   },
   {
     id: "veg-mamidi-allam-pachadi",
