@@ -708,6 +708,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Sun-dried fresh curry leaves toasted and ground with spices, garlic, and tamarind.",
+    image: "/images/products/karivepaku_podi.webp",
   },
   {
     id: "powder-kandi-podi",
@@ -717,6 +718,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Classic Andhra roasted split-pigeon-peas (toor dal) powder seasoned with cumin and black pepper.",
+    image: "/images/products/kandi_podi.webp",
   },
   {
     id: "powder-kobbari-karam",
@@ -726,6 +728,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Dehydrated grated coconut blended with dried red chilies, garlic cloves, and salt.",
+    image: "/images/products/kobbari_karam.webp",
   },
   {
     id: "powder-masala-kura-karam",
@@ -735,6 +738,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Premium multipurpose curry spice mix, roasted and ground for authentic flavor in every dish.",
+    image: "/images/products/masala_kura_karam.webp",
   },
   {
     id: "powder-ginger-garlic-paste",
@@ -744,6 +748,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Fresh, thick ginger garlic paste made with zero chemical preservatives or coloring.",
+    image: "/images/products/ginger_garlic_paste.webp",
   },
   {
     id: "powder-garam-masala",
@@ -753,6 +758,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Extremely aromatic premium spice mix featuring cinnamon, cloves, cardamom, mace, and star anise.",
+    image: "/images/products/garam_masala.webp",
   },
   {
     id: "powder-pulihora-paste",
@@ -762,5 +768,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: "kg",
     isVeg: true,
     description: "Thick, tangy tamarind paste cooked with peanuts, green chilies, curry leaves, and mustard seeds.",
+    image: "/images/products/pulihora_paste.webp",
   },
 ];
