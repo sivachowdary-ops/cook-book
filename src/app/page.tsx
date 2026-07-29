@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Product } from "@/data/products";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ProductDetailModal } from "@/components/ProductDetailModal";
+import { VideoReel } from "@/components/VideoReel";
 import { useCountry } from "@/context/CountryContext";
 import { useProducts } from "@/context/ProductContext";
 import { 
@@ -181,6 +182,31 @@ export default function Home() {
             >
               Our Story
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 1.5 INTRODUCTION REEL SECTION */}
+      <section className="py-16 bg-bg-cream/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 space-y-6">
+              <span className="text-xs font-bold text-accent uppercase tracking-widest block">Welcome</span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary leading-tight">
+                Watch Our Story
+              </h2>
+              <div className="w-16 h-1 bg-accent rounded-full" />
+              <p className="text-sm sm:text-base text-text-dark/80 leading-relaxed">
+                Take a quick look at how we prepare our authentic, traditional recipes. From sun-drying our fresh cuts for pickles to rolling organic jaggery laddus by hand, see the magic that goes into every Cook Book order.
+              </p>
+              <div className="flex items-center gap-3 text-sm font-semibold text-primary">
+                <Play className="w-5 h-5 text-accent" />
+                <span>Turn on sound for the full experience</span>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <VideoReel />
+            </div>
           </div>
         </div>
       </section>
