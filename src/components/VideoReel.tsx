@@ -41,7 +41,7 @@ export const VideoReel = () => {
         loop
         muted={isMuted}
         playsInline
-        poster="/videos/cook_book_video.webp"
+        poster="/videos/cook_book_poster.webp"
       />
       
       {/* Overlay gradient for controls */}
