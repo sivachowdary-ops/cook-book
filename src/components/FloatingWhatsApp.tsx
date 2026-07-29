@@ -3,7 +3,7 @@
 import React from "react";
 
 export const FloatingWhatsApp: React.FC = () => {
-  const whatsappNumber = "[BUSINESS_WHATSAPP]"; // Placeholder to be replaced by client
+  const whatsappNumber = "919553372333";
   const defaultMessage = encodeURIComponent(
     "Hello Cook Book! I would love to order some traditional sweets and snacks. Please guide me on the ordering process."
   );

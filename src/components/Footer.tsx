@@ -75,8 +75,8 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm text-white/80">
               <li>
                 <span className="font-medium text-accent">WhatsApp:</span>{" "}
-                <a href="https://wa.me/919553977566" className="hover:underline">
-                  +91 95539 77566
+                <a href="https://wa.me/919553372333" className="hover:underline">
+                  +91 95533 72333
                 </a>
               </li>
               <li>

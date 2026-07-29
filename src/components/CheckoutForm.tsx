@@ -205,7 +205,7 @@ ${itemsText}
 
     // Redirect to WhatsApp
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/919553977566?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/919553372333?text=${encodedMessage}`, "_blank");
   };
 
   return (
