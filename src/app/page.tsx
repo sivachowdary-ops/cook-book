@@ -186,31 +186,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 1.5 INTRODUCTION REEL SECTION */}
-      <section className="py-16 bg-bg-cream/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 space-y-6">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest block">Welcome</span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary leading-tight">
-                Watch Our Story
-              </h2>
-              <div className="w-16 h-1 bg-accent rounded-full" />
-              <p className="text-sm sm:text-base text-text-dark/80 leading-relaxed">
-                Take a quick look at how we prepare our authentic, traditional recipes. From sun-drying our fresh cuts for pickles to rolling organic jaggery laddus by hand, see the magic that goes into every Cook Book order.
-              </p>
-              <div className="flex items-center gap-3 text-sm font-semibold text-primary">
-                <Play className="w-5 h-5 text-accent" />
-                <span>Turn on sound for the full experience</span>
-              </div>
-            </div>
-            <div className="order-1 md:order-2 flex justify-center">
-              <VideoReel />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 2. TRUST BADGES */}
       <section className="bg-white border-y border-border-brand py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -322,6 +297,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INTRODUCTION REEL SECTION */}
+      <section className="py-16 bg-bg-cream/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 space-y-6">
+              <span className="text-xs font-bold text-accent uppercase tracking-widest block">Welcome</span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary leading-tight">
+                Watch Our Story
+              </h2>
+              <div className="w-16 h-1 bg-accent rounded-full" />
+              <p className="text-sm sm:text-base text-text-dark/80 leading-relaxed">
+                Take a quick look at how we prepare our authentic, traditional recipes. From sun-drying our fresh cuts for pickles to rolling organic jaggery laddus by hand, see the magic that goes into every Cook Book order.
+              </p>
+              <div className="flex items-center gap-3 text-sm font-semibold text-primary">
+                <Play className="w-5 h-5 text-accent" />
+                <span>Turn on sound for the full experience</span>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <VideoReel />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. HOW TO ORDER (4-step visual flow) */}
       <section className="py-16 bg-bg-cream/40 border-y border-border-brand/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -365,46 +365,6 @@ export default function Home() {
                 We'll confirm delivery charges, share payment links, and dispatch your order.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. FOUNDER SECTION */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-            
-            <div className="md:col-span-5 flex justify-center">
-              <div className="w-full max-w-sm aspect-square rounded-3xl overflow-hidden border border-border-brand relative ornate-border shadow-md">
-                <img
-                  src="/images/cook_book_founder.webp"
-                  alt="Anusha Reddy Nandyala"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-
-            {/* Right: Founder Message */}
-            <div className="md:col-span-7 space-y-6">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest block">Our Heritage</span>
-              <h2 className="font-serif text-3xl font-bold text-primary">A Message from the Founder</h2>
-              <div className="w-16 h-0.5 bg-primary" />
-              
-              <div className="space-y-4 text-sm text-text-dark/85 leading-relaxed">
-                <p className="italic">
-                  "Cook Book was born out of a desire to share authentic, homemade Telugu recipes with the global community. For years, we prepared these traditional sweets and savories for family festivals, and now we want to bring that same magic directly to your kitchen table."
-                </p>
-                <p>
-                  Every single sweet is hand-bound with organic jaggery and pure cow ghee. Our pickles are prepared from fresh cuts, hand-dried and cured under direct sunlight with cold-pressed oils. We strictly reject preservative chemicals, colorings, and additives.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-serif font-bold text-base text-primary">Anusha Reddy Nandyala</h4>
-                <p className="text-xs text-text-dark/45 font-semibold">Founder, Cook Book</p>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
