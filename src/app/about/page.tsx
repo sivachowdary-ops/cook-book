@@ -40,11 +40,11 @@ export default function About() {
 
         {/* Right Graphic Logo */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="w-full max-w-sm aspect-square rounded-3xl overflow-hidden border border-accent/25 ornate-border shadow-xl relative">
+          <div className="w-full max-w-sm aspect-square rounded-3xl overflow-hidden border border-accent/25 ornate-border shadow-xl relative bg-black">
             <img
-              src="/images/cook_book_logo.webp"
-              alt="Cook Book Traditional Craft Logo"
-              className="w-full h-full object-cover scale-105"
+              src="/images/cook_book_logo.webp?v=2"
+              alt="Anusha Cookbook Traditional Craft Logo"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

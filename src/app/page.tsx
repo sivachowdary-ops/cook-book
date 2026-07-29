@@ -322,6 +322,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOUNDER STRIP */}
+      <section className="py-10 bg-white border-y border-border-brand/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+            {/* Founder Photo */}
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-accent/50 p-0.5 overflow-hidden shadow-md shrink-0">
+              <img
+                src="/images/cook_book_founder.webp"
+                alt="Anusha Reddy Nandyala"
+                className="w-full h-full object-cover object-top rounded-full"
+              />
+            </div>
+            {/* Founder Message */}
+            <div className="text-center sm:text-left space-y-1.5">
+              <p className="text-sm sm:text-base italic text-text-dark/80 leading-relaxed">
+                &ldquo;Every recipe at Anusha Cookbook is prepared with love, using traditional methods and the finest ingredients — just like my grandmother made them.&rdquo;
+              </p>
+              <div className="flex items-center justify-center sm:justify-start gap-2">
+                <span className="font-serif font-bold text-sm text-primary">Anusha Reddy Nandyala</span>
+                <span className="text-[10px] text-text-dark/40 font-semibold">· Founder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. HOW TO ORDER (4-step visual flow) */}
       <section className="py-16 bg-bg-cream/40 border-y border-border-brand/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

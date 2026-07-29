@@ -50,16 +50,16 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
         <div className="flex items-center justify-between h-20">
           {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full overflow-hidden border border-accent/40 shadow-xs flex items-center justify-center bg-white shrink-0">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent/50 shadow-md flex items-center justify-center bg-black shrink-0">
               <img
-                src="/images/cook_book_logo.webp"
-                alt="Cook Book Logo"
-                className="w-full h-full object-cover scale-110"
+                src="/images/cook_book_logo.webp?v=2"
+                alt="Anusha Cookbook Logo"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-2xl font-bold tracking-wide text-primary leading-tight group-hover:text-primary-hover transition-colors">
-                Cook Book
+                Anusha Cookbook
               </span>
               <span className="text-[10px] tracking-widest text-accent uppercase font-semibold">
                 Taste the Magic
