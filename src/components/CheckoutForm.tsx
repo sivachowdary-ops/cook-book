@@ -74,9 +74,10 @@ export const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSuccess }) => {
           tempErrors.phone = "Enter a valid 10-digit mobile number (e.g. 9876543210)";
         }
       } else if (country === "UK") {
-        // UK mobile starts with 07 / +44 7 and has 10 digits after prefix
-        if (!/^(\+447\d{9}|07\d{9})$/.test(cleanPhone)) {
-          tempErrors.phone = "Enter a valid UK mobile number starting with 07 or +44 7";
+        // UK phone: allow 07xxx, +447xxx, or landline formats (10-11 digits)
+        const ukDigits = cleanPhone.replace(/^\+44/, "0").replace(/\D/g, "");
+        if (ukDigits.length < 10 || ukDigits.length > 11) {
+          tempErrors.phone = "Enter a valid UK phone number (e.g. 07700 900123)";
         }
       } else if (country === "US") {
         // NANP format
@@ -205,7 +206,7 @@ ${itemsText}
 
     // Redirect to WhatsApp
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/919553372333?text=${encodedMessage}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=919553372333&text=${encodedMessage}`, "_blank");
   };
 
   return (

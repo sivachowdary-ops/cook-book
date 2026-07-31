@@ -10,7 +10,7 @@ export default function Contact() {
     const defaultMsg = customMsg.trim() 
       ? encodeURIComponent(customMsg) 
       : encodeURIComponent("Hello Cook Book! I have a question about your products.");
-    window.open(`https://wa.me/919553372333?text=${defaultMsg}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=919553372333&text=${defaultMsg}`, "_blank");
   };
 
   return (
@@ -37,7 +37,7 @@ export default function Contact() {
               <MessageSquare className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div className="text-xs">
                 <span className="font-bold text-text-dark block">WhatsApp Business</span>
-                <a href="https://wa.me/919553372333" className="text-text-dark/70 hover:underline">
+                <a href="https://api.whatsapp.com/send?phone=919553372333" className="text-text-dark/70 hover:underline">
                   +91 95533 72333
                 </a>
               </div>

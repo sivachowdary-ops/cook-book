@@ -327,7 +327,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
             {/* Founder Photo */}
-            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl border-3 border-accent/50 p-1 overflow-hidden shadow-lg shrink-0">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl border-3 border-accent/50 p-1 overflow-hidden shadow-lg shrink-0">
               <img
                 src="/images/cook_book_founder.webp"
                 alt="Anusha Reddy Nandyala"
