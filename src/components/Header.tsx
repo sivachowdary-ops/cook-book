@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCountry } from "@/context/CountryContext";
 import { useCart } from "@/context/CartContext";
 import { CountryCode } from "@/lib/pricing";
+import { getOfferStatus } from "@/data/combos";
 import { ShoppingBag, Menu, X, ChevronDown, PhoneCall } from "lucide-react";
 
 interface HeaderProps {
@@ -31,9 +32,20 @@ export const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
 
   const activeCountry = countries.find((c) => c.code === country) || countries[0];
 
+  const [comboActive, setComboActive] = useState(false);
+
+  useEffect(() => {
+    setComboActive(getOfferStatus() === "active");
+    const interval = setInterval(() => {
+      setComboActive(getOfferStatus() === "active");
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/shop" },
+    ...(comboActive ? [{ name: "Combo Offer 🔥", href: "/combo-offer" }] : []),
     { name: "Our Heritage", href: "/about" },
     { name: "How to Order", href: "/how-to-order" },
     { name: "Contact", href: "/contact" },

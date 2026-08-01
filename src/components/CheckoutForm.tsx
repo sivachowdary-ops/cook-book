@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useCountry } from "@/context/CountryContext";
 import { useCart } from "@/context/CartContext";
 import { convertPrice, formatPrice } from "@/lib/pricing";
+import { formatComboPrice, countryToCurrency } from "@/data/combos";
 import { supabase } from "@/lib/supabase";
 
 interface CheckoutFormProps {
@@ -117,18 +118,35 @@ export const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSuccess }) => {
 
     // Calculate itemized pricing
     let subtotalINR = 0;
+    const currency = countryToCurrency(country);
     const itemsText = cart.map((item) => {
-      const price = convertPrice(item.product.basePriceINR, country, rates);
-      const totalItemPrice = price * item.quantity;
-      subtotalINR += item.product.basePriceINR * item.quantity;
+      const isCombo = item.product.id.startsWith("combo-");
+      let price: number;
+      let totalItemPrice: number;
 
-      const unitLabel = item.product.unit === "kg" ? "kg" : "pcs";
-      const displayPrice = formatPrice(price, country);
-      const displayTotalItem = formatPrice(totalItemPrice, country);
-      return `- ${item.product.name} (${item.quantity}${unitLabel}) @ ${displayPrice}/${item.product.unit} = ${displayTotalItem}`;
+      if (isCombo) {
+        // Use fixed combo price directly
+        price = item.product.basePriceINR; // stored as INR offer price
+        totalItemPrice = price * item.quantity;
+        subtotalINR += totalItemPrice;
+        const comboDisplayPrice = formatComboPrice(price, "INR");
+        return `- ${item.product.name}\n  Items: ${item.product.description}\n  Price: ${comboDisplayPrice}`;
+      } else {
+        price = convertPrice(item.product.basePriceINR, country, rates);
+        totalItemPrice = price * item.quantity;
+        subtotalINR += item.product.basePriceINR * item.quantity;
+        const unitLabel = item.product.unit === "kg" ? "kg" : "pcs";
+        const displayPrice = formatPrice(price, country);
+        const displayTotalItem = formatPrice(totalItemPrice, country);
+        return `- ${item.product.name} (${item.quantity}${unitLabel}) @ ${displayPrice}/${item.product.unit} = ${displayTotalItem}`;
+      }
     }).join("\n");
 
     const activeCurrencySubtotal = cart.reduce((acc, item) => {
+      const isCombo = item.product.id.startsWith("combo-");
+      if (isCombo) {
+        return acc + (item.product.basePriceINR * item.quantity);
+      }
       const price = convertPrice(item.product.basePriceINR, country, rates);
       return acc + (price * item.quantity);
     }, 0);

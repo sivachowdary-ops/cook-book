@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Product } from "@/data/products";
 import { ProductGrid } from "@/components/ProductGrid";
@@ -8,6 +8,7 @@ import { ProductDetailModal } from "@/components/ProductDetailModal";
 import { VideoReel } from "@/components/VideoReel";
 import { useCountry } from "@/context/CountryContext";
 import { useProducts } from "@/context/ProductContext";
+import { getOfferStatus, getTimeRemaining, offerMeta, OfferStatus } from "@/data/combos";
 import { 
   Heart, 
   ChevronDown, 
@@ -17,7 +18,8 @@ import {
   ShieldCheck, 
   HelpCircle,
   Play,
-  ArrowRight
+  ArrowRight,
+  Flame
 } from "lucide-react";
 
 export default function Home() {
@@ -25,6 +27,18 @@ export default function Home() {
   const { products } = useProducts();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [comboStatus, setComboStatus] = useState<OfferStatus>("upcoming");
+  const [comboTimeLeft, setComboTimeLeft] = useState(getTimeRemaining());
+
+  useEffect(() => {
+    setComboStatus(getOfferStatus());
+    setComboTimeLeft(getTimeRemaining());
+    const interval = setInterval(() => {
+      setComboStatus(getOfferStatus());
+      setComboTimeLeft(getTimeRemaining());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Best Sellers (Subset of catalog)
   const bestSellerIds = [
@@ -113,6 +127,24 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full min-w-0">
+      {/* COMBO OFFER MARQUEE — only visible during active offer */}
+      {comboStatus === "active" && (
+        <div className="bg-gradient-to-r from-primary via-primary-hover to-primary text-white overflow-hidden">
+          <Link href="/combo-offer" className="block">
+            <div className="animate-marquee whitespace-nowrap py-2 text-xs sm:text-sm font-semibold flex items-center gap-8">
+              {[...Array(4)].map((_, i) => (
+                <span key={i} className="flex items-center gap-2">
+                  <Flame className="w-4 h-4 text-accent" />
+                  <span>{offerMeta.offerName} — {offerMeta.discountLabel} on Combo Packs!</span>
+                  <span className="text-accent font-mono">Ends in {comboTimeLeft.days}d {comboTimeLeft.hours}h {comboTimeLeft.minutes}m</span>
+                  <span className="text-accent">→ Build Now</span>
+                </span>
+              ))}
+            </div>
+          </Link>
+        </div>
+      )}
+
       {/* 1. HERO SECTION */}
       <section className="relative bg-gradient-to-br from-primary via-primary-hover to-[#3A0A10] text-white overflow-hidden py-16 sm:py-24">
         {/* Background Decorative Mandala Pattern Overlay */}
@@ -176,6 +208,15 @@ export default function Home() {
             >
               Shop Our Catalog
             </Link>
+            {comboStatus === "active" && (
+              <Link
+                href="/combo-offer"
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-2 border-accent text-accent py-4 px-8 rounded-xl font-bold transition-all text-center cursor-pointer flex items-center justify-center gap-2 animate-pulse"
+              >
+                <Flame className="w-5 h-5" />
+                Combo Offer — {offerMeta.discountLabel}
+              </Link>
+            )}
             <Link
               href="/about"
               className="w-full sm:w-auto bg-transparent hover:bg-white/10 border border-white/30 text-white py-4 px-8 rounded-xl font-bold transition-all text-center cursor-pointer"

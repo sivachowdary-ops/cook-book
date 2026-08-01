@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { useCountry } from "@/context/CountryContext";
 import { convertPrice, formatPrice } from "@/lib/pricing";
+import { comboPricing, countryToCurrency, formatComboPrice, WeightTier } from "@/data/combos";
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowLeft } from "lucide-react";
 import { CheckoutForm } from "./CheckoutForm";
 import { useToast } from "@/context/ToastContext";
@@ -31,6 +32,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const totalCost = cart.reduce((acc, item) => {
+    if (item.product.id.startsWith("combo-")) {
+      const tier = item.product.id.split("-")[1] as WeightTier;
+      const currency = countryToCurrency(country);
+      const offerPrice = comboPricing[tier][currency].offer;
+      return acc + offerPrice * item.quantity;
+    }
     const price = convertPrice(item.product.basePriceINR, country, rates);
     return acc + price * item.quantity;
   }, 0);
@@ -105,8 +112,17 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
               /* Items list view */
               <div className="space-y-4">
                 {cart.map((item) => {
-                  const convertedUnitPrice = convertPrice(item.product.basePriceINR, country, rates);
+                  const isCombo = item.product.id.startsWith("combo-");
                   const isKg = item.product.unit === "kg";
+                  let convertedUnitPrice = 0;
+                  if (isCombo) {
+                    const tier = item.product.id.split("-")[1] as WeightTier;
+                    const currency = countryToCurrency(country);
+                    convertedUnitPrice = comboPricing[tier][currency].offer;
+                  } else {
+                    convertedUnitPrice = convertPrice(item.product.basePriceINR, country, rates);
+                  }
+                  
                   return (
                     <div
                       key={item.product.id}
@@ -115,7 +131,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                       {/* Left: Product Icon Placeholder */}
                       <div className="w-16 h-16 rounded-lg bg-bg-cream flex items-center justify-center shrink-0 border border-border-brand">
                         <span className="text-xl font-serif text-primary font-bold">
-                          {item.product.name.charAt(0)}
+                          {isCombo ? "🎁" : item.product.name.charAt(0)}
                         </span>
                       </div>
 
@@ -126,9 +142,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                             <h4 className="text-sm font-semibold text-text-dark line-clamp-1">
                               {item.product.name}
                             </h4>
-                            <span className="text-xs text-text-dark/40 font-mono">
-                              {formatPrice(convertedUnitPrice, country)} / {item.product.unit}
-                            </span>
+                            {isCombo ? (
+                              <p className="text-[10px] text-text-dark/60 leading-tight mt-0.5 line-clamp-2">
+                                {item.product.description}
+                              </p>
+                            ) : (
+                              <span className="text-xs text-text-dark/40 font-mono">
+                                {formatPrice(convertedUnitPrice, country)} / {item.product.unit}
+                              </span>
+                            )}
                           </div>
                           <button
                             onClick={() => {
@@ -163,7 +185,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                           </div>
                           
                           <span className="text-sm font-bold text-primary font-mono">
-                            {formatPrice(convertedUnitPrice * item.quantity, country)}
+                            {isCombo 
+                              ? formatComboPrice(convertedUnitPrice * item.quantity, countryToCurrency(country)) 
+                              : formatPrice(convertedUnitPrice * item.quantity, country)}
                           </span>
                         </div>
                       </div>
@@ -177,12 +201,28 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                 <div className="bg-bg-cream/40 rounded-xl p-3 border border-border-brand/60 mb-4">
                   <h4 className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Order summary</h4>
                   <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">
-                    {cart.map((item) => (
-                      <div key={item.product.id} className="flex justify-between text-xs text-text-dark/80">
-                        <span>{item.product.name} ({item.quantity}{item.product.unit === "kg" ? "kg" : "pcs"})</span>
-                        <span className="font-mono">{formatPrice(convertPrice(item.product.basePriceINR, country, rates) * item.quantity, country)}</span>
-                      </div>
-                    ))}
+                    {cart.map((item) => {
+                      const isCombo = item.product.id.startsWith("combo-");
+                      let itemPrice = 0;
+                      if (isCombo) {
+                        const tier = item.product.id.split("-")[1] as WeightTier;
+                        const currency = countryToCurrency(country);
+                        itemPrice = comboPricing[tier][currency].offer;
+                      } else {
+                        itemPrice = convertPrice(item.product.basePriceINR, country, rates);
+                      }
+                      
+                      return (
+                        <div key={item.product.id} className="flex justify-between text-xs text-text-dark/80">
+                          <span>{item.product.name} ({item.quantity}{isCombo ? "combo" : item.product.unit === "kg" ? "kg" : "pcs"})</span>
+                          <span className="font-mono">
+                            {isCombo 
+                              ? formatComboPrice(itemPrice * item.quantity, countryToCurrency(country)) 
+                              : formatPrice(itemPrice * item.quantity, country)}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                   <div className="border-t border-border-brand mt-2 pt-2 flex justify-between text-sm font-bold text-primary">
                     <span>Total Subtotal</span>

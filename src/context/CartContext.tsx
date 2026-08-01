@@ -87,8 +87,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   // Calculations
-  const weightItems = cart.filter((item) => item.product.unit === "kg");
-  const pieceItems = cart.filter((item) => item.product.unit === "piece");
+  const weightItems = cart.filter((item) => item.product.unit === "kg" && !item.product.id.startsWith("combo-"));
+  const pieceItems = cart.filter((item) => item.product.unit === "piece" && !item.product.id.startsWith("combo-"));
 
   const totalWeight = weightItems.reduce((acc, item) => acc + item.quantity, 0);
   const totalPieceCount = pieceItems.reduce((acc, item) => acc + item.quantity, 0);
