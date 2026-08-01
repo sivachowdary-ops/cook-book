@@ -7,10 +7,11 @@ export const FloatingWhatsApp: React.FC = () => {
   const defaultMessage = encodeURIComponent(
     "Hello Cook Book! I would love to order some traditional sweets and snacks. Please guide me on the ordering process."
   );
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + defaultMessage;
   
   return (
     <a
-      href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${defaultMessage}`}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"

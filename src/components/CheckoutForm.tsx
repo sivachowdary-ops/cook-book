@@ -206,7 +206,12 @@ ${itemsText}
 
     // Redirect to WhatsApp
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://api.whatsapp.com/send?phone=919553372333&text=${encodedMessage}`, "_blank");
+    const whatsappUrl = "https://api.whatsapp.com/send?phone=919553372333&text=" + encodedMessage;
+    const newWindow = window.open(whatsappUrl, "_blank");
+    // Fallback: if popup was blocked (common on UK mobile browsers), redirect in same tab
+    if (!newWindow || newWindow.closed) {
+      window.location.href = whatsappUrl;
+    }
   };
 
   return (

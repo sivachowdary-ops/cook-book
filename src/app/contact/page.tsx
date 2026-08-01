@@ -10,7 +10,9 @@ export default function Contact() {
     const defaultMsg = customMsg.trim() 
       ? encodeURIComponent(customMsg) 
       : encodeURIComponent("Hello Cook Book! I have a question about your products.");
-    window.open(`https://api.whatsapp.com/send?phone=919553372333&text=${defaultMsg}`, "_blank");
+    const url = "https://api.whatsapp.com/send?phone=919553372333&text=" + defaultMsg;
+    const win = window.open(url, "_blank");
+    if (!win || win.closed) window.location.href = url;
   };
 
   return (
