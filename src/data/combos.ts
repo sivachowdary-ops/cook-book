@@ -98,7 +98,7 @@ export const tierLabels: Record<WeightTier, string> = {
 export const offerMeta = {
   offerName: "Launch Offer",
   discountLabel: "20% OFF",
-  startDate: "2026-08-02T00:00:00+05:30",
+  startDate: "2026-08-01T00:00:00+05:30",
   endDate: "2026-08-09T23:59:59+05:30",
 };
 
