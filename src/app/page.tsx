@@ -323,19 +323,19 @@ export default function Home() {
       </section>
 
       {/* FOUNDER STRIP */}
-      <section className="py-12 sm:py-16 bg-white border-y border-border-brand/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
-            {/* Founder Photo */}
-            <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl border-3 border-accent/50 p-1 overflow-hidden shadow-lg shrink-0">
+      <section className="py-0 sm:py-12 bg-white border-y border-border-brand/50 overflow-hidden">
+        <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-0 sm:gap-10">
+            {/* Founder Photo — full width on mobile, fixed size on desktop */}
+            <div className="w-full sm:w-56 h-64 sm:h-56 overflow-hidden sm:rounded-2xl sm:border-3 sm:border-accent/50 sm:p-1 sm:shadow-lg shrink-0">
               <img
                 src="/images/cook_book_founder.webp"
                 alt="Anusha Reddy Nandyala"
-                className="w-full h-full object-cover object-top rounded-xl"
+                className="w-full h-full object-cover object-top sm:rounded-xl"
               />
             </div>
             {/* Founder Message */}
-            <div className="text-center sm:text-left space-y-3">
+            <div className="text-center sm:text-left space-y-3 px-4 sm:px-0 py-6 sm:py-0">
               <p className="text-base sm:text-lg italic text-text-dark/80 leading-relaxed">
                 &ldquo;Every recipe at Anusha Cookbook is prepared with love, using traditional methods and the finest ingredients — just like my grandmother made them.&rdquo;
               </p>
